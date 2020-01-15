@@ -9,14 +9,25 @@ struct Node {
 	~Node() {
 		left = right = nullptr;
 	}
+	friend std::ostream& operator << (std::ostream& os, Node* node);
 };
+
+std::ostream& operator << (std::ostream& os, Node* node) {
+	if(node == nullptr) {
+		os << "[NULL]";
+	}
+	else {
+		os << node->data;
+	}
+	return os;
+}
 
 class BST {
 	Node* root;
 public:
 	BST(Node* r = nullptr) : root(r) { }
 	void insertNode(Node* r, int data);
-	bool search(Node* r, int data);
+	Node* search(Node* r, int data);
 	void deleteNode(Node* r, int data);
 	Node* getRoot() {
 		return root;
@@ -47,11 +58,11 @@ void BST :: insertNode(Node* r, int data) {
 	}
 }
 
-bool BST :: search(Node* r, int data) {
+Node* BST :: search(Node* r, int data) {
 	if(root == nullptr || r == nullptr)
-		return false;
+		return nullptr;
 	if(r->data == data)
-		return true;
+		return r;
 	else {
 		if(r->data <= data)
 			return search(r->left, data);
@@ -94,9 +105,9 @@ int main() {
 	
 	print2DUtil(bst->getRoot(), 10);
 	
-	cout << bst->search(bst->getRoot(), 9);
-	cout << bst->search(bst->getRoot(), 28);
-	cout << bst->search(bst->getRoot(), 3);
+	cout << bst->search(bst->getRoot(), 9) << endl;
+	cout << bst->search(bst->getRoot(), 28) << endl;
+	cout << bst->search(bst->getRoot(), 3) << endl;
 	cout << bst->search(bst->getRoot(), 21);
 	cout << endl;
 	
