@@ -24,7 +24,7 @@ class DoublyLinkedList {
 public:
 	DoublyLinkedList(Node* h = nullptr, Node* r = nullptr) : head(h), rear(r) {}
 	void addNode(int data);
-	//bool deleteNode(int data);
+	bool deleteNode(int data);
 	bool searchNode(int data);
 	void insertNode(int data, int afterThis);
 	friend std::ostream& operator << (std::ostream& os, DoublyLinkedList* list);
@@ -44,7 +44,7 @@ void DoublyLinkedList :: addNode(int data) {
 	}
 }
 
-/*bool DoublyLinkedList :: deleteNode(int data) {
+bool DoublyLinkedList :: deleteNode(int data) {
 	if(head == nullptr)
 		return false;
 	if(head->data == data) {
@@ -61,7 +61,8 @@ void DoublyLinkedList :: addNode(int data) {
 	while(tempNode != nullptr) {
 		if(tempNode->data == data) {
 			trailNode->next = tempNode->next;
-			tempNode->next->prev = trailNode;
+			if(tempNode->next != nullptr)
+				tempNode->next->prev = trailNode;
 			delete tempNode;
 			return true;
 		}
@@ -70,7 +71,7 @@ void DoublyLinkedList :: addNode(int data) {
 	}
 	return false;
 }
-*/
+
 void DoublyLinkedList :: insertNode(int data, int afterThis) {
 	if(head == nullptr) {
 		head = rear = new Node(data);
@@ -122,7 +123,7 @@ bool DoublyLinkedList :: searchNode(int data) {
 
 std::ostream& operator << (std::ostream& os, DoublyLinkedList* list) {
 	if (list->head == nullptr) {
-		os << "[HEAD = NULL]" << endl;
+		os << "[HEAD = TAIL]" << endl;
 		return os;
 	}
 	auto tempNode = list->head;
@@ -131,7 +132,7 @@ std::ostream& operator << (std::ostream& os, DoublyLinkedList* list) {
 		os << tempNode << "<->";
 		tempNode = tempNode->next;
 	}
-	os << "[NULL]" << endl;
+	os << "[TAIL]" << endl;
 	return os;
 }
 
@@ -157,25 +158,32 @@ int main() {
 		cout << "5 is not in list" << endl;
 	}
 
-/*	if(list->deleteNode(1)) {
+	if(list->deleteNode(1)) {
 		cout << "1 deleted" << endl;
 	}
+	cout << list;
 	
 	if(list->deleteNode(4)) {
 		cout << "4 deleted" << endl;
 	}
+
+	cout << list;
 	
 	if(list->deleteNode(8)) {
 		cout << "8 deleted" << endl;
 	}
 
+	cout << list;
+
 	if(!list->deleteNode(10)) {
 		cout << "Unable to delete 10!" << endl;
 	}
 	list->deleteNode(4);
+
+	cout << list;
 	list->deleteNode(8);
 
-*/	cout << list;
+	cout << list;
 
 	list->insertNode(4, 3);
 	list->insertNode(8, 7);
