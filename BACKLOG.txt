@@ -1,0 +1,5 @@
+THIS FILE IS TO KEEP A TRACK OF ANY PENDING TASKS IN PROJECT.
+
+1) Migration of existing code to latest standards.
+2) Deleting a node in BST.
+3) Templatization of current existing DS codes.
