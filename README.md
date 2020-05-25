@@ -9,3 +9,28 @@ Using 'auto', iterators, nullptr and other technical advancements.
 
 Python:
 Standard practices.
+
+
+# Mandatory Things To learn
+
+* Data Structure
+ ** Linked List
+ ** Trees, Tries & Graphs
+ ** Stacks & Queues
+ ** Heaps
+ ** Vectors/ArrayList
+ ** Hash Tables
+
+* Algorithms
+ ** BFS
+ ** DFS
+ ** Binary Search
+ ** Merge Sort
+ ** Quick Sort
+
+* Concepts
+ ** Bit Manipulation
+ ** Memory (Stack vs Heap)
+ ** Recursion
+ ** Dynamic Programming
+ ** Big O Time and Space
