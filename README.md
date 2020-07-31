@@ -1,8 +1,10 @@
 # CompetitiveCoding
 Lets follow the practice of using latest coding standards for both C++ and Python.
 
-# Build Status
+# Info
 ![C/C++ CI](https://github.com/vishalv971/CompetitiveCoding/workflows/C/C++%20CI/badge.svg?branch=master)
+
+![Contributors](https://img.shields.io/badge/Contributors-2-blue)
 
 # Content
 C++:
