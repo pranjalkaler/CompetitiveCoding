@@ -1,6 +1,9 @@
 # CompetitiveCoding
 Lets follow the practice of using latest coding standards for both C++ and Python.
 
+# Build Status
+![C/C++ CI](https://github.com/vishalv971/CompetitiveCoding/workflows/C/C++%20CI/badge.svg?branch=master)
+
 C++:
 
 Using smart pointers
