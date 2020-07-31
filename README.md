@@ -4,6 +4,7 @@ Lets follow the practice of using latest coding standards for both C++ and Pytho
 # Build Status
 ![C/C++ CI](https://github.com/vishalv971/CompetitiveCoding/workflows/C/C++%20CI/badge.svg?branch=master)
 
+# Content
 C++:
 
 Using smart pointers
