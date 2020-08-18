@@ -1,0 +1,8 @@
+import java.util.*;
+import java.io.*;
+
+class TestJava {
+    public static void main(String args[]) {
+        System.out.println("Hello World");
+    }
+};
