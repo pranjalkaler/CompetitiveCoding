@@ -1,6 +1,8 @@
 //Question link -- https://leetcode.com/problems/implement-queue-using-stacks/
 //Author -- Saumya Sachdev
 
+import java.util.Stack;
+
 class MyQueue {
     Stack<Integer> queue = new Stack<Integer>();
 
@@ -40,7 +42,7 @@ class MyQueue {
 public class QueueUsingStack{
   public static void main(String args[]) {
     MyQueue obj = new MyQueue();
-    obj.push(x);
+    obj.push(3);
     int param_2 = obj.pop();
     int param_3 = obj.peek();
     boolean param_4 = obj.empty();
