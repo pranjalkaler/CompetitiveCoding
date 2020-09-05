@@ -3,7 +3,7 @@
 
 errorCountCpp=0
 errorCountJava=0
-for fn in `find . -name "*.cpp"`; do
+for fn in `find . -name "*.cpp" -cmin -1440`; do
     g++ $fn
     if [ $? -eq 0 ]; then
         echo "$fn compiled successfully"
@@ -13,7 +13,7 @@ for fn in `find . -name "*.cpp"`; do
     fi
 done
 
-count_cpp=`find . -name "*.cpp" | wc -l`
+count_cpp=`find . -name "*.cpp -cmin -1440" | wc -l`
 
 echo ""
 echo "======================================================="
@@ -22,7 +22,7 @@ echo "                   Compiled $count_cpp files             "
 echo "             $errorCountCpp files failed during build        "
 echo "======================================================="
 
-for fn in `find . -name "*.java"`; do
+for fn in `find . -name "*.java" -cmin -1440`; do
     javac $fn
     if [ $? -eq 0 ]; then
         echo "$fn compiled successfully"
@@ -32,7 +32,7 @@ for fn in `find . -name "*.java"`; do
     fi
 done
 
-count_java=`find . -name "*.java" | wc -l`
+count_java=`find . -name "*.java -cmin -1440" | wc -l`
 
 echo ""
 echo "======================================================="
