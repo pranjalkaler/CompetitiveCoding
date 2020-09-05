@@ -13,7 +13,7 @@ for fn in `find . -name "*.cpp" -cmin -1440`; do
     fi
 done
 
-count_cpp=`find . -name "*.cpp -cmin -1440" | wc -l`
+count_cpp=`find . -name "*.cpp" -cmin -1440 | wc -l`
 
 echo ""
 echo "======================================================="
@@ -32,7 +32,7 @@ for fn in `find . -name "*.java" -cmin -1440`; do
     fi
 done
 
-count_java=`find . -name "*.java -cmin -1440" | wc -l`
+count_java=`find . -name "*.java" -cmin -1440 | wc -l`
 
 echo ""
 echo "======================================================="
