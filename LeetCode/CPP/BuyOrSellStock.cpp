@@ -3,6 +3,7 @@
 // Author: Vishal Vishwanathan
 
 #include <iostream>
+#include <bits/stdc++.h>
 
 class Solution {
 public:
